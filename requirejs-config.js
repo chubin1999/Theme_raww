@@ -1,6 +1,6 @@
 var config = {
     paths: {            
-            fontawesome: "Magento_Theme/js/fontawesome"
+            fontawesome: "js/fontawesome"
         },   
     shim: {
         'fontawesome': {
