@@ -249,5 +249,66 @@
         .lib-css(border-radius, @font-size3);
         .lib-css(width,676px);
     }
+
+    //Misc
+
+    .awe-icon {
+        .lib-css(font-size, @font-size22);
+        .lib-css(color, @color-31251c-brown);
+    }
+
+    .awe-icon:hover {
+        .lib-css(color, #4f4035);
+    }
+
+    .fa-instagram {
+        .lib-css(padding-left, 18px);
+    }
+
+    .face {
+        .lib-css(text-transform, uppercase);
+        .lib-css(font-size, @font-size14);
+        .lib-css(line-height, 15px);
+        .lib-css(color, @color-30241a-brown);
+        .lib-css(text-align, center);
+        .lib-css(font-weight, 800);
+        .lib-css(font-family,@font-avenir);
+        .lib-css(margin-left,22px);
+        .lib-css(margin-top,-3px);
+    }
+
+    .face {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 15px;
+        color: #30241a;
+        text-align: center;
+        font-weight: 800;
+        .lib-css(font-family,@font-avenir);
+        margin-left: 22px;
+        margin-top: -3px;
+    }
+
+    .face-1 {
+        p {
+            .lib-css(margin-bottom,3px);
+        }
+    }
+
+    .face-2{
+        p {
+            .lib-css(margin-bottom,3px);
+        }
+        
+        p:before {
+            
+            .lib-css(content, " ");
+            .lib-css(position, absolute);
+            .lib-css(width, @font-size37);
+            .lib-css(height, @font-size110);
+            .lib-css(margin-left, 22px);
+            .lib-css(border-bottom, @font-size2 solid @color-30241a-brown);
+        }
+    }
 }
 
