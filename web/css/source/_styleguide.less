@@ -250,6 +250,88 @@
         .lib-css(width,676px);
     }
 
+    //Input field
+
+    select {
+        .lib-css(box-shadow, none);
+        .lib-css(width, @font-size320);
+        .lib-css(height, @font-size40);
+        .lib-css(border-radius, @font-size3);
+        .lib-css(background-color, #fff);
+        .lib-css(border, @font-size1 solid @color-eee);
+        .lib-css(padding-left, 15px);
+
+        option {
+            width: 320px;
+            height: 40px;
+            font-size: @font-size15;
+            line-height: @font-size40;
+            color: @color-31251c-brown;
+        }
+
+        option:hover {
+            background-color: #f6f6f6;
+        }
+    }
+
+    select:checked:hover {
+        background-color: red;
+    }
+
+    select.input-lg {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+    }
+
+    svg.svg-inline--fa.fa-chevron-down.fa-w-14 {
+        .lib-css(margin-left, -31px);
+        .lib-css(font-size, @font-size10);
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    input[type="text"] {
+        .lib-css(width, @font-size320);
+        .lib-css(height, @font-size40);
+        .lib-css(border-radius, @font-size3);
+        .lib-css(background-color, #fff);
+        .lib-css(border, @font-size1 solid #eee);
+        .lib-css(margin-top, 5px);
+        .lib-css(padding-left, 15px);
+    }
+
+    input:placeholder-shown {
+        .lib-css(font-size, @font-size15);
+        .lib-css(line-height, 75px);
+        .lib-css(font-family, @font-avenir);
+    }
+
+    input:not(:focus) {
+        .lib-css(color, #999999);
+    }
+
+    input[type="text"]:focus {
+        .lib-css(box-shadow, none);
+        .lib-css(border, @font-size2 solid #eee);
+    }
+
+    input.mage-error {
+        .lib-css(font-size, @font-size15);
+        .lib-css(line-height, @font-size30);
+        .lib-css(color, @color-31251c-brown);
+        .lib-css(padding-left, 15px);
+        .lib-css(border, @font-size2 solid @color-ea1f24-red);
+        .lib-css(font-family,'Avenir');
+    }
+
+    div.mage-error {
+        .lib-css(font-size, @font-size14);
+        .lib-css(color, @color-ea1f24-red);
+        .lib-css(font-family, @font-avenir);
+    }
+
+
     //Misc
 
     .awe-icon {
@@ -258,7 +340,7 @@
     }
 
     .awe-icon:hover {
-        .lib-css(color, #4f4035);
+        .lib-css(color, @color-4f4035-hover);
     }
 
     .fa-instagram {
@@ -288,8 +370,7 @@
             .lib-css(margin-bottom,3px);
         }
         
-        p:before {
-            
+        p:before {      
             .lib-css(content, " ");
             .lib-css(position, absolute);
             .lib-css(width, @font-size37);
@@ -299,4 +380,3 @@
         }
     }
 }
-

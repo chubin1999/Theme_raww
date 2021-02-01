@@ -1,6 +1,7 @@
 var config = {
     paths: {            
-            fontawesome: "js/fontawesome"
+            fontawesome: "js/fontawesome",
+            bootstrapjs: "js/bootstrap.min",
         },   
     shim: {
         'fontawesome': {
