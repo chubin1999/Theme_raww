@@ -365,3 +365,58 @@
     }
 }
 
+//Tab
+
+.product.data.items {
+
+    .item.title {
+        .lib-css(background-color, #fff);
+        .lib-css(margin, 0);
+        .lib-css(height, @font-size60);
+        .lib-css(border, @font-size1 solid @color-d1d1d1-gray);
+        .lib-css(border-right, none);
+        .lib-css(border-bottom, none);
+        .lib-css(cursor, pointer);
+
+        .switch {
+            .lib-css(font-size, @font-size14);
+            .lib-css(letter-spacing, @font-size1);
+            .lib-css(line-height, 20px);
+            .lib-css(color, #30241a);
+            .lib-css(padding, 20px 20px 19px 20px);
+            .lib-css(background-color, #fff);
+            .lib-css(border, none);
+            .lib-css(font-family,'Avenir');
+        }
+    }
+
+    .item.title:hover {
+        .lib-css(background-color, #fff);
+        .lib-css(border-bottom, @font-size2 solid @color-e9d5d2-pink);
+    }
+
+    .item.title.last-item {
+        .lib-css(border-right, @font-size1 solid @color-d1d1d1-gray);
+    }
+
+    .item.title:hover {
+        .lib-css(background-color, #fff);
+    }
+
+    .item.title.active {
+
+        .switch {
+            .lib-css(height, @font-size60);
+            .lib-css(border-bottom, none);       
+        }
+    
+        .switch:hover {
+            .lib-css(background-color, #fff);
+        }
+    }
+
+    .item.content {
+        .lib-css(margin-top, @font-size60);
+        .lib-css(border, @font-size1 solid @color-d1d1d1-gray);
+    }
+}
