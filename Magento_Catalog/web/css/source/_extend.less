@@ -1,0 +1,40 @@
+& when (@media-common = true) {
+	.category-top{
+		position: relative;
+		
+		& .category-doubletext-top{
+			max-width: 1280px;
+			padding: 0 20px;
+			box-sizing: border-box;
+			width: 100%;
+			.position-absolute(@__top:56%, @__y:0);
+			& .page-title-wrapper{
+				& .page-title{
+					font-size: 100px;
+					letter-spacing: -2px;
+					line-height: 80px;
+					color: @color-white;
+					font-family: @font-Markerfield;
+					&.base{
+
+					}
+				}
+			}
+			& >p{
+				width: 420px;
+				height: 46px;
+				font-size: 18px;
+				line-height: @font-size28;
+				color: @color-white;
+				font-family: @font-avenir-roman;
+			}
+		}
+		& >p{
+			& >img{
+				display: block;
+				width: 100%;
+			}
+			
+		}
+	}
+}
