@@ -224,6 +224,7 @@
         .lib-css(cursor, pointer);
         .lib-css(position, relative);
     }
+
     // alert
     .message-success {
         .lib-message(success);
@@ -251,7 +252,6 @@
     }
 
     //Input field
-
     select {
         .lib-css(box-shadow, none);
         .lib-css(width, @font-size320);
@@ -260,22 +260,6 @@
         .lib-css(background-color, #fff);
         .lib-css(border, @font-size1 solid @color-eee);
         .lib-css(padding-left, 15px);
-
-        option {
-            width: 320px;
-            height: 40px;
-            font-size: @font-size15;
-            line-height: @font-size40;
-            color: @color-31251c-brown;
-        }
-
-        option:hover {
-            background-color: #f6f6f6;
-        }
-    }
-
-    select:checked:hover {
-        background-color: red;
     }
 
     select.input-lg {
@@ -380,3 +364,4 @@
         }
     }
 }
+
