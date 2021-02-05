@@ -8,8 +8,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="page.wrapper">
-           <container name="rss.link" htmlTag="div" htmlClass="category-top" before="main.content">
-            <container name="category.doubletext.top" htmlTag="div" htmlClass="category-doubletext-top" after="main.content">
+         <container name="rss.link" htmlTag="div" htmlClass="category-top" before="main.content">
+            <container name="category.doubletext.top" htmlTag="div" htmlClass="category-doubletext-top">
                 <block class="Magento\Cms\Block\Block" name="category.text.top">
                     <arguments>
                         <argument name="block_id" xsi:type="string">category_text_top</argument>
@@ -18,15 +18,47 @@
             </container>
             <block class="Magento\Framework\View\Element\Template" name="image.top" template="Magento_Catalog::imagetop.phtml"/>
         </container>
-    </referenceContainer>
-    <referenceContainer name="columns.top">
-        <container name="category.view.container" htmlTag="div" htmlClass="category-view" after="-">
-         <block class="Magento\Catalog\Block\Category\View" name="category.image" template="Magento_Catalog::category/image.phtml"/>
-         <block class="Magento\Catalog\Block\Category\View" name="category.description" template="Magento_Catalog::category/description.phtml"/>
-         <block class="Magento\Catalog\Block\Category\View" name="category.cms" template="Magento_Catalog::category/cms.phtml"/>
-     </container>
- </referenceContainer>
- <referenceContainer name="content">
+        <container name="sub.category" htmlTag="div" htmlClass="sub-category" after="rss.link">
+         <container name="sub.category.content" htmlTag="div" htmlClass="content">
+            <container name="sub.category.item.face" htmlTag="div" htmlClass="face-1">
+                <block class="Magento\Cms\Block\Block" name="face">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">face</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="sub.category.item.eyes" htmlTag="div" htmlClass="face-1">
+                <block class="Magento\Cms\Block\Block" name="eyes">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">eyes</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="sub.category.item.lips" htmlTag="div" htmlClass="face-1">
+                <block class="Magento\Cms\Block\Block" name="lips">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">lips</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="sub.category.item.nails" htmlTag="div" htmlClass="face-1">
+                <block class="Magento\Cms\Block\Block" name="nails">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">nails</argument>
+                    </arguments>
+                </block>
+            </container>
+        </container>
+    </container>
+</referenceContainer>
+<referenceContainer name="columns.top">
+    <container name="category.view.container" htmlTag="div" htmlClass="category-view" after="-">
+       <block class="Magento\Catalog\Block\Category\View" name="category.image" template="Magento_Catalog::category/image.phtml"/>
+       <block class="Magento\Catalog\Block\Category\View" name="category.description" template="Magento_Catalog::category/description.phtml"/>
+       <block class="Magento\Catalog\Block\Category\View" name="category.cms" template="Magento_Catalog::category/cms.phtml"/>
+   </container>
+</referenceContainer>
+<referenceContainer name="content">
     <block class="Magento\Catalog\Block\Category\View" name="category.products" template="Magento_Catalog::category/products.phtml">
         <block class="Magento\Catalog\Block\Product\ListProduct" name="category.products.list" as="product_list" template="Magento_Catalog::product/list.phtml">
             <container name="category.product.list.additional" as="additional" />
@@ -35,10 +67,10 @@
             </block>
             <block class="Magento\Catalog\Block\Product\ProductList\Item\Container" name="category.product.addto" as="addto">
                 <block class="Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare"
-                   name="category.product.addto.compare" as="compare"
-                   template="Magento_Catalog::product/list/addto/compare.phtml"/>
-               </block>
-               <block class="Magento\Catalog\Block\Product\ProductList\Toolbar" name="product_list_toolbar" template="Magento_Catalog::product/list/toolbar.phtml">
+                 name="category.product.addto.compare" as="compare"
+                 template="Magento_Catalog::product/list/addto/compare.phtml"/>
+             </block>
+             <block class="Magento\Catalog\Block\Product\ProductList\Toolbar" name="product_list_toolbar" template="Magento_Catalog::product/list/toolbar.phtml">
                 <block class="Magento\Theme\Block\Html\Pager" name="product_list_toolbar_pager"/>
             </block>
             <action method="setToolbarBlockName">

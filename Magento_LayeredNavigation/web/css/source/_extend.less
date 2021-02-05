@@ -1,0 +1,213 @@
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .filter-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 14px;
+    }
+}
+& when (@media-common =true) {
+    .block-subtitle {
+        display: none;
+    }
+    .block.filter{
+        display: inline-block;
+        float: left;
+        margin-bottom: 0;
+        border: none;
+        position: absolute;
+        left: -30px;
+        .filter-title{
+            display: none;
+        }
+        .filter-content{
+            margin: 0;
+            .filter-current{
+                display: inline-block;
+                float: left;
+                width: auto;
+                line-height: 28px;
+                padding-top: 5px;
+                padding-left: 0;
+                position: relative;
+                ol.items{
+                    padding: 0;
+                    li{
+                        border: solid 2px #eee;
+                        height: 36px;
+                        padding: 0 14px 0 40px;
+                        border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                        display: inline-block;
+                        margin-bottom: 0;
+                        cursor: pointer;
+                        position: relative;
+                        span{
+                            font: 400 14px/36px Avenir-Heavy, Sans-serif;
+                            color: #30241a;
+                        }
+                        .filter-label{
+                            display: inline;
+                        }
+                        a.action.remove{
+                            top: 12px;
+                            left: 20px;
+                            height: 12px;
+                            line-height: 0;
+                            position: absolute;
+                            .remove_price{
+                                margin-bottom: 11px;
+                            }
+                        }
+                    }
+                }
+                &:before{
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 20px;
+                    background: #eee;
+                    display: inline-block;
+                    left: 0;
+                    top: 24px;
+                }
+            }
+            
+            .filter-actions{
+                display: none;
+
+            }
+            .filter-options{
+                display: inline-block;
+                float: left;
+                width: auto;
+                .filter-options-item{
+
+                    cursor: pointer;
+                    margin-right: 0;
+                    padding-bottom: 0;
+                    float: left;
+                    z-index: 99;
+                    font-weight: 600;
+                    position: relative;
+                    text-transform: uppercase;
+                    word-break: break-all;
+                    text-decoration: none;
+
+                    .filter-options-title{
+                        //Cai nay bao boc width khien no khong bi tran
+                        width: max-content;
+                        padding: 21px 51px 0 31px;
+                        font-size: 14px;
+                        line-height: 28px;
+                        font-family: avenir_black, arial,sans-serif;
+                        text-transform: uppercase;
+                        letter-spacing: .4px;
+                        color: #30241a;
+                        background: url(../images/Plus.png) no-repeat right 30px top 29px;
+                    }
+                    &:last-child:after{
+                        content: none;
+                    }
+                    .filter-options-content{
+                        padding: 0 15px 0 30px;
+                        box-shadow: none;
+                        border: none;
+                        .item a{
+                            font-family: Avenir-Roman;
+                            font-size: 15px;
+                            line-height: 28px;
+                            display: block;
+                            padding: 0;
+                            color: #31251c;
+                            text-decoration: none;
+                            margin: 0;
+                            text-transform: none;
+                            font-weight: 500;
+                        }
+                    }
+                    & .filter-options-content:before{
+                        content: '';
+                        display: block;
+                        border: none;
+                        width: 100%;
+                        height: calc(100%);
+                        position: absolute;
+                        top: 0px;
+                        left: 0;
+                        pointer-events: none;
+                        -webkit-box-shadow: 0px 0px 34px 6px #eee;
+                        -moz-box-shadow: 0px 0px 34px 6px #eee;
+                        box-shadow: 0px 0px 34px 6px #eee;
+                    }
+
+                }
+                &:first-child{
+                    margin-left: -30px;
+                }
+            }
+            .filter-options-item.active .filter-options-title{
+                background: url(../images/Minus.png) no-repeat right 30px top 34px;
+            }
+            .filter-options-item.allow.active{
+                background: #fff;
+            }
+
+        }
+
+    }
+    //Chung
+    #layered-filter-block .filter-content .filter-options+.filter-current{
+        padding-left:30px;
+    }
+
+}
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .filter-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 14px;
+    }
+    .filter-options{
+        background: transparent;
+        clear: both;
+        display: block;
+        overflow: initial;
+        position: static;
+    }
+    .filter-options-item{
+        border: 0;
+        display: inline-block;
+        margin-right: 25px;
+        position: relative;
+    }
+    .filter-options-content{
+        visibility: visible;
+    }
+    .filter-current .items{
+        margin: 10px 0;
+    }
+    .block.filter .filter-content .filter-options .filter-options-item:after{
+        content: '';
+        width: 1px;
+        height: 23px;
+        display: inline-block;
+        position: absolute;
+        top: 23px;
+        right: -1px;
+        background: #eee;
+    }
+    .block.filter .filter-content .filter-options .filter-options-item.active:after{
+        content: '';
+        width: 0px;
+        height: 23px;
+        display: inline-block;
+        position: absolute;
+        top: 23px;
+        right: -1px;
+        background: #eee;
+    }
+}
