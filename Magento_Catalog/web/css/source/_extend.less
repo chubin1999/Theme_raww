@@ -1,4 +1,5 @@
 @import '_listing_extend.less';
+@import '_listing_new.less';
 
 & when (@media-common = true) {
 	//Banner top
@@ -9,7 +10,7 @@
 			.lib-css(padding, 0 20px);
 			.lib-css(box-sizing, border-box);
 			.lib-css(width, 100%);
-			.position-absolute(@__top:56%, @__y:0);
+			.position-absolute(@__bottom:15%, @__y:0);
 			& .page-title-wrapper{
 				& .page-title{
 					.lib-css(font-size, 99px);
@@ -29,9 +30,12 @@
 			}
 		}
 		& >p{
+			max-height: 539px;
+			overflow: hidden;
 			& >img{
 				.lib-css(display, block);
 				.lib-css(width, 100%);
+				.lib-css(height, auto);
 			}
 			
 		}
@@ -143,9 +147,37 @@
 		margin-top: 40px;
 		margin-bottom: -18px;
 	}
+}
+
+@media only screen and (max-width: 767px) {
+	.category-top .category-doubletext-top {
+		.page-title-wrapper 
+		{
+			.page-title{
+				font-size: 54px;
+				margin-bottom: 17px;
+				line-height: 54px;
+			}
+		}
+	}
+	
+	
+	.category-top > p > img{
+		height: 340px;
+		width: auto;
+		max-width: none;
+	}
+}
+@media only screen and (max-width: @screen__xs) {
+	.category-top .category-doubletext-top {
+		& >p{
+			width: auto;
+		}
+	}
 	
 }
-.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break = @screen__m) {
 	.toolbar-products .toolbar-sorter{
 		position: static;
 	}

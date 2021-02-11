@@ -65,7 +65,7 @@
             .lib-css(border-radius, @font-size3);
             .lib-button(
                 @_button-color: @color-white,
-                @_button-width: @font-size180,
+                @_button-width: auto,
                 @_button-line-height: @font-size35,
                 @_button-background: @color-30241a-brown,
 
@@ -118,42 +118,82 @@
             .lib-css(height, @font-size50);
             .lib-css(outline, none);
             .lib-form-fieldset(
-               @_border: none,
-               @_legend-font-family: @font-avenir-roman,
-               @_legend-color: @color-31251c-brown,
-               @_legend-line-height: @font-size20,
-               @_legend-font-size: @font-size15,
-               @_margin: 0);
+             @_border: none,
+             @_legend-font-family: @font-avenir-roman,
+             @_legend-color: @color-31251c-brown,
+             @_legend-line-height: @font-size20,
+             @_legend-font-size: @font-size15,
+             @_margin: 0);
         }
 
         .button-adjust{
           .lib-button(
-           @_button-background: none,
-           @_button-border: none,
-           @_button-color: @color-8b7f71,
-           @_button-font-family: @font-avenir-roman,
-           @_button-font-size: @font-size24,
-           @_button-color-hover: @color-8b7f71,
-           @_button-border-hover: none,
-           @_button-background-hover: none,
-           @_button-color-active: @color-8b7f71,
-           @_button-background-active: none,
-           @_button-border-active: none);
+             @_button-background: none,
+             @_button-border: none,
+             @_button-color: @color-8b7f71,
+             @_button-font-family: @font-avenir-roman,
+             @_button-font-size: @font-size24,
+             @_button-color-hover: @color-8b7f71,
+             @_button-border-hover: none,
+             @_button-background-hover: none,
+             @_button-color-active: @color-8b7f71,
+             @_button-background-active: none,
+             @_button-border-active: none);
       }
   }
+
+    //2
+    .field.qty{
+        .lib-css(border, 1px solid #eee);
+        border-radius: 3px;
+        display: inline-block;
+        .control{
+            .qty-btn{
+                width: 30px;
+                height: 48px;
+                display: inline-block;
+                float: left;
+                cursor: pointer;
+            }
+            .minus-btn{
+                background: url('../images/Minus.png') no-repeat right 4px center;
+            }
+            .plus-btn{
+                background: url('../images/Plus.png') no-repeat right 14px center;
+            }
+        }
+    }
+    .qty-btn+input#qty{
+        width: 38px;
+        padding: 0;
+        text-align: center;
+        float: left;
+        background: #fff;
+        font-family: Avenir-Heavy, Sans-serif;
+        font-size: 15px;
+        border: none;
+        height: 48px;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        appearance: none;
+        line-height: 20px;
+        color: #31251c;
+        padding-top: 3px;
+    }
+
 
     // input
     input,
     select,
     textarea {
-       .lib-form-element-color(@_background: @color-white,
+     .lib-form-element-color(@_background: @color-white,
         @_border-color: @color-ddd,
         @_color: @color-black,
         @_focus-color: @color-black,
         @_focus-border-color: @color-ddd);
-   }
+ }
 
-   input {
+ input {
     background-color: #f4f4f4;
     &:not([disabled]):focus {
         .lib-css(box-shadow, none);
@@ -299,9 +339,9 @@
         .lib-css(font-family, @font-avenir-roman);
     }
 
-    input:not(:focus) {
+/*    input:not(:focus) {
         .lib-css(color, #999999);
-    }
+    }*/
 
     input[type="text"]:focus {
         .lib-css(box-shadow, none);

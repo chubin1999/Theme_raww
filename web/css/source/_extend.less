@@ -1,9 +1,18 @@
-//add styleguide
 @import '_styleguide.less';
 
-.position-absolute(@__left:50%, @__top:50%,@__x:-50%, @__y:-50%){
+.position-absolute(@__left:50%, @__bottom:50%,@__x:-50%, @__y:-50%){
 	position: absolute;
 	left: @__left;
-	top: @__top;
+	bottom: @__bottom;
 	transform: translate(@__x, @__y);
+}
+.mixin-flex(@align-item: unset, @justify-content: unset) {
+    display: flex;
+    align-items: @align-item;
+    justify-content: @justify-content;
+}
+.mixin-style(@color: @color-white, @font-size: 14px, @font-family: inherit) {
+    color: @color;
+    font-size: @font-size;
+    font-family: @font-family;
 }

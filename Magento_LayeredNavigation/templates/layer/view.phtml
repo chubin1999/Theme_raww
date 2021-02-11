@@ -15,23 +15,26 @@
 
 <?php if ($block->canShowBlock()) : ?>
     <div class="block filter" id="layered-filter-block">
-        <?php $filtered = count($block->getLayer()->getState()->getFilters()) ?>
-        <div class="block-title filter-title" data-count="<?= /* @noEscape */ $filtered ?>">
-            <strong data-role="title"><?= $block->escapeHtml(__('Shop By')); ?></strong>
-        </div>
+
+        <a class="refine_by" href="javascript:void(0)">Refine by</a>
         <!--  Can hang ngang -->
         <div class="block-content filter-content">
 
-            <div class="block-actions filter-actions">
-                <a href="<?= $block->escapeUrl($block->getClearUrl()) ?>" class="action clear filter-clear">
-                    <span><?= $block->escapeHtml(__('Clear All')) ?></span>
-                </a>
-            </div>
         <?php endif; ?>
         <?php $wrapOptions = false; ?>
         <?php foreach ($block->getFilters() as $filter) : ?>
             <?php if ($filter->getItemsCount()) : ?>
                 <?php if (!$wrapOptions) : ?>
+
+                    <!-- Add refine -->
+                    <div class="filter-options filter-options-refine">
+                        <div class="filter-options-item filter-options-item-refine">
+                            <div class="filter-options-title filter-options-title-refine"> Refine by </div>
+                            <span class="close"></span>
+                        </div>
+                    </div>
+                    <!-- end add refine -->
+
                     <strong role="heading" aria-level="2" class="block-subtitle filter-subtitle"><?= $block->escapeHtml(__('Shopping Options')) ?></strong>
                     <div class="filter-options" id="narrow-by-list" data-role="content" data-mage-init='
                     {
@@ -50,28 +53,28 @@
                         <div data-role="title" class="filter-options-title">
                             <?= 'filter'?>
                             <?= $block->escapeHtml(__($filter->getName())) ?></div>
-                        <div data-role="content" class="filter-options-content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter) ?></div>
-                    </div>
-                <?php endif ?>
-            <?php endif; ?>
-        <?php endforeach; ?>
-        <?php if ($wrapOptions) : ?>
-        </div>
+                            <div data-role="content" class="filter-options-content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter) ?></div>
+                        </div>
+                    <?php endif ?>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            <?php if ($wrapOptions) : ?>
+            </div>
 
-        <!-- Di chuyen khoi state xuong duoi options -->
-        <?= $block->getChildHtml('state') ?>
-        <?php if ($block->getLayer()->getState()->getFilters()) : ?>
-        <!--  -->
+            <!-- Di chuyen khoi state xuong duoi options -->
+            <?= $block->getChildHtml('state') ?>
+            <?php if ($block->getLayer()->getState()->getFilters()) : ?>
+            <!--  -->
 
-        <?php else : ?>
-            <script>
-                require([
-                    'jquery'
-                    ], function($) {
-                        $('#layered-filter-block').addClass('filter-no-options');
-                    });
-                </script>
-            <?php endif; ?>
+            <?php else : ?>
+                <script>
+                    require([
+                        'jquery'
+                        ], function($) {
+                            $('#layered-filter-block').addClass('filter-no-options');
+                        });
+                    </script>
+                <?php endif; ?>
+            </div>
         </div>
-    </div>
-    <?php endif; ?>
+        <?php endif; ?>
