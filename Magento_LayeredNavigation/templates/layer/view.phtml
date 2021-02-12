@@ -61,6 +61,7 @@
             <?php if ($wrapOptions) : ?>
             </div>
 
+
             <!-- Di chuyen khoi state xuong duoi options -->
             <?= $block->getChildHtml('state') ?>
             <?php if ($block->getLayer()->getState()->getFilters()) : ?>
@@ -77,4 +78,19 @@
                 <?php endif; ?>
             </div>
         </div>
-        <?php endif; ?>
+    <?php endif; ?>
+
+    <script>
+        require([
+            'jquery'
+            ], function ($) {
+                $(function () {
+                    $('.refine_by').click(function(){
+                        $('.filter-content').toggleClass('active');
+                    });
+                    $('.close').click(function(){
+                        $('.filter-content').toggleClass('active');
+                    });
+                })
+            });
+        </script>
