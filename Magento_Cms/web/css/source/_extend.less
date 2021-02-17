@@ -1,0 +1,490 @@
+& when (@media-common = true) {
+	body{
+		box-sizing: border-box;
+	}
+	.cms-home .page-main{
+		max-width: 100%;
+		padding: 0;
+	}
+	.cms-home .page-main .column.main{
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 0;
+		.home-block{
+			position: relative;
+			width: 100%;
+			float: left;
+		}
+
+		//Block 1 img big
+		.home-block-1{
+			.block1-banner-img{
+				p{
+					margin-bottom: 0;
+					img{
+						width: 100%;
+						height: auto;
+						display: block;
+					}
+				}
+			}
+			.block1-banner-content{
+				position: absolute;
+				top: 50%;
+				left: 11.2%;
+				transform: translateY(-67%);
+				max-width: 460px;
+				.block1-banner-main-text{
+					.mixin-style(@color: @color-white, @font-size: 98px, @font-family: @font-Markerfield);
+					letter-spacing: -2.5px;
+					line-height: 80px;
+					text-transform: capitalize;
+					&>p{
+						margin-bottom: 0;
+					}
+				}
+				.block1-banner-extra-text{
+					font-family: @font-avenir-roman;
+					font-size: 18px;
+					cursor: pointer;
+					max-width: 400px;
+					line-height: 29px;
+					margin-bottom: 5px;
+					padding: 30px 0px;
+					color: white;
+					height: 45px;
+				}
+				.block1-banner-btn{
+					background: @color-white;
+					width: 180px;
+					height: 50px;
+					border-radius: 3px;
+					font-size: 16px;
+					&>p{
+						padding-top: 10px;
+					}
+				}
+			}
+		}
+
+		//Blog 2 three img
+		.home-block-2{
+			.block-static-block{
+				.home-content-top-wrap{
+					padding: 110px 0 85px 0;
+					background: url(../images/extra-banner-background.png) no-repeat left center;
+					background-size: cover;
+					text-align: center;
+					position: relative;
+					top: -1px;
+					.home-content-top{
+						display: inline-block;
+						width: 100%;
+						max-width: 1270px;
+						padding: 0px 15px;
+						cursor: pointer;
+						box-sizing: border-box;
+						.content{
+							display: inline-block;
+							float: left;
+							width: calc((100% - 3px)/3);
+							margin-right: 18px;
+							position: relative;
+							.title-mb{
+								display: none;
+							}
+							img{
+								height: auto;
+								max-width: 100%;
+								box-sizing: border-box;
+							}
+							&>a{
+								font: 64px/74px @font-Markerfield,Sans-serif;
+								letter-spacing: -1px;
+								color: #fff;
+								text-decoration: none;
+								position: absolute;
+								left: 40px;
+								bottom: 45px;
+								text-transform: capitalize;
+							}
+						}
+						.third{
+							margin-right:0;
+						}
+						.mobile-only{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		//Blog 2 three img
+		.home-block-3{
+			.block-static-block{
+				.home-content-middle-wrap{
+					display: block;
+					width: 100%;
+					margin: 0 auto 100px;
+					max-width: 1114px;
+					.home-content-middle{
+						text-align: center;
+						display: inline-block;
+						margin-top: 73px;
+						width: 100%;
+						.block-superfood-block{
+							.title{
+								display: block;
+								margin-bottom: 10px;
+								&>h2{
+									font: 42px/48px @font-avenir-heavy,Sans-serif;
+									color: #30241a;
+									letter-spacing: -1.1px;
+									text-transform: inherit;
+									margin-bottom: 31px;
+								}
+								&>p{
+									font: 20px/28px @font-avenir-roman,Arial,Sans-serif;
+									color: #30241a;
+									max-width: 1000px;
+									display: block;
+									margin: 0 auto 53px;
+									letter-spacing: 0.14px;
+								}
+							}
+						}
+						.block-superfoods.content{
+							display: inline-block;
+							width: 100%;
+							padding: 0;
+							max-width: 1240px;
+							margin: 0 auto;
+							text-align: center;
+							.items{
+								display: inline-block;
+								vertical-align: middle;
+								width: auto;
+								max-width: 100%;
+								.item{
+									display: inline-block;
+									width: calc(100%/8);
+									float: left;
+									text-align: center;
+									margin-bottom: 17px;
+									margin-left: 0;
+									clear: none;
+									min-height: 152px;
+									.superfood-info{
+										display: inline-block;
+										max-width: 97px;
+										text-align: center;
+										cursor: pointer;
+										&>p{
+											position: relative;
+											width: 97px;
+											height: 97px;
+											display: inline-block;
+										}
+										&>span{
+											margin: 6px auto 0px;
+											font: 14px/15px @font-avenir-black,Sans-serif;
+											color: #30241a;
+											text-transform: uppercase;
+											display: inline-block;
+											height: 35px;
+											width: 100%;
+											text-decoration: none;
+											font-weight: bold;
+										}
+									}
+								}
+							}
+							.actions{
+								margin-top: 15px;
+								margin-bottom: -4px;
+								text-align: center;
+								position: relative;
+								top: -4px;
+								&>a{
+									width: 196px;
+									height: 50px;
+									line-height: 50px;
+									background: #30241a;
+									font: 15px/50px @font-avenir-heavy, Sans-serif;
+									color: #fff;
+									text-decoration: none;
+									display: inline-block;
+									border-radius: 4px;
+									-webkit-border-radius: 4px;
+									&>span{
+										line-height: 50px;
+										font-family: @font-avenir-heavy,sans-serif;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1230px) {
+	.cms-home .page-main .column.main .home-block-2 {
+		.block-static-block .home-content-top-wrap .home-content-top{
+			.content{
+				width: calc(31.33333333%);
+			}
+			.first{
+				margin-left: 10px;
+			}
+		} 
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.cms-home .page-main .column.main .home-block-1 .block1-banner-content {
+		.block1-banner-main-text{
+			font-size: 60px;
+			line-height: 40px;
+		}
+	}
+}
+
+@media only screen and (max-width: 980px) {
+	.cms-home .page-main .column.main .home-block-2 {
+		.block-static-block .home-content-top-wrap {
+			padding: 50px 0;
+			.home-content-top{
+				.content {
+					&>a{
+						font: 45px/50px @font-Markerfield,Sans-serif;
+						left: 20px;
+						text-align: left;
+					}
+				}
+			}
+		} 
+	}
+
+	.cms-home .page-main .column.main .home-block-3 {
+		.block-static-block .home-content-middle-wrap {
+			.home-content-middle .block-superfoods.content .items{
+				.item{
+					width: calc(100%/6);
+				}
+				#block-what-are-superfoods-item-13 {
+					display: none;
+				}
+				#block-what-are-superfoods-item-14 {
+					display: none;
+				}
+				#block-what-are-superfoods-item-15 {
+					display: none;
+				}
+				#block-what-are-superfoods-item-16 {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+
+@media only screen and (max-width: 796px) {
+	.cms-home .page-main .column.main .home-block-2 {
+		.block-static-block .home-content-top-wrap .home-content-top{
+			.first{
+				margin-left: 4px;
+			}
+		} 
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.cms-home .page-main .column.main {
+		.home-block-2{
+			.block-static-block{
+				.home-content-top-wrap{
+					background: transparent;
+					padding: 10px 10px 0;
+					line-height: 0;
+					.home-content-top{
+						padding: 0;
+						margin-left: 10px;
+						.content{
+							width: calc(50% - 2px);
+							margin-right: 10px;
+							line-height: 0;
+							.title-mb{
+								line-height: 0;
+								display: inline-block;
+								width: 100%;
+								&>a{
+									display: inline-block;
+									width: 100%;
+									position: initial;
+									line-height: 0;
+									&>img{
+										display: inline-block;
+										width: 100%;
+									}
+								}
+							}
+							&>p{
+								img{
+									display: none;
+								}
+							}
+							&>a{
+								display: inline-block;
+								font-size: 32px;
+								line-height: 32px;
+								bottom: 20px;
+								left: 13px;
+							}
+						}
+						.first{
+							margin-left: 0;
+						}
+						.second{
+							margin-right: 0;
+						}
+						.third{
+							margin-right: 10px;
+						}
+						.mobile-only{
+							display: inline-block;
+							margin-right: 0;
+						}
+
+					}
+				}
+			}
+		}
+	}
+
+	body .page-wrapper .page-main .columns .column.main{
+		.home-block-3{
+			.home-content-middle-wrap{
+				margin-bottom: 40px;
+				.home-content-middle{
+					margin-top: 10px;
+					.block-superfood-block {
+						.title{
+							text-align: center;
+							&>h2{
+								font: 24px/28px @font-avenir-heavy,Sans-serif;
+							}
+							&>p{
+								font: 16px/24px @font-avenir-roman,Arial,Sans-serif;
+								margin-bottom: 26px;
+							}
+						}
+						.block-superfoods.content {
+							margin: 0 -13px;
+							.items{
+								.item{
+									width: calc(100%/3);
+									min-height: 144px;
+								}
+								#block-what-are-superfoods-item-7 {
+									display: none;
+								}
+								#block-what-are-superfoods-item-8 {
+									display: none;
+								}
+								#block-what-are-superfoods-item-9 {
+									display: none;
+								}
+								#block-what-are-superfoods-item-10 {
+									display: none;
+								}
+								#block-what-are-superfoods-item-11 {
+									display: none;
+								}
+								#block-what-are-superfoods-item-12 {
+									display: none;
+								}
+							}
+						}
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: @screen__s) {
+	.cms-home .page-main .column.main {
+		.home-block-1 {
+			.block1-banner-content {
+				top: 56%;
+				left: 5.2%;
+				.block1-banner-main-text{
+					font-size: 40px;
+					line-height: 20px;
+				}
+				.block1-banner-extra-text{
+					font-size: 16px;
+					padding: 10px 0;
+				}
+				.block1-banner-btn{
+					width: auto;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.cms-home .page-main .column.main {
+		.home-block-2 .block-static-block .home-content-top-wrap {
+			.home-content-top{
+				margin-left: 8px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: @screen__xs) {
+	body .page-wrapper .page-main .columns .column.main{
+		.home-block-3{
+			.home-content-middle-wrap{
+				padding: 0;
+			}
+		}
+	}
+	.cms-home .page-main .column.main .home-block-1 {
+		.block1-banner-content {
+			top: 65%;
+			left: 5.2%;
+			.block1-banner-extra-text{
+				font-size: 13px;
+				padding: 10px 0;
+			}
+			.block1-banner-btn{
+				width: auto;
+				font-size: 12px;
+			}
+		}	
+	}
+	.cms-home .page-main .column.main {
+		.home-block-2 .block-static-block .home-content-top-wrap {
+			.home-content-top{
+				margin-left: 4px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: @screen__xxs) {
+	.cms-home .page-main .column.main {
+		.home-block-2 .block-static-block .home-content-top-wrap {
+			.home-content-top{
+				margin-left: 1px;
+			}
+		}
+	}
+}
