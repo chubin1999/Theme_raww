@@ -81,10 +81,11 @@
                 <width>90</width>
                 <height>90</height>
             </image>
+            <!-- Click image list -->
             <image id="product_swatch_image_large" type="image"/>
             <image id="product_swatch_image_medium" type="image">
-                <width>240</width>
-                <height>300</height>
+                <width>400</width>
+                <height>400</height>
             </image>
             <image id="product_swatch_image_small" type="thumbnail">
                 <width>88</width>

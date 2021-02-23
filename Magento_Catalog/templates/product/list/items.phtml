@@ -202,11 +202,13 @@ switch ($type = $block->getType()) {
 
                                         <?= /* @noEscape */ $block->getProductPrice($_item) ?>
 
+                                        <div class="abcxyz">
                                         <?php if ($_item->getTypeId() == \Magento\ConfigurableProduct\Model\Product\Type\Configurable::TYPE_CODE) {
 
                                             $swatchBlock = $this->getLayout()->createBlock("Magento\Swatches\Block\Product\Renderer\Listing\Configurable")->setTemplate("Magento_Swatches::product/listing/renderer.phtml");
                                             echo $swatchBlock->setProduct($_item)->toHtml();
                                         } ?>
+                                        </div>
 
                                         <?php if ($templateType) : ?>
                                             <?= $block->getReviewsSummaryHtml($_item, $templateType) ?>

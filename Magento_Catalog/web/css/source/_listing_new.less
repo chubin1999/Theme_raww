@@ -30,7 +30,7 @@
 		.product-item-details{
 			position: relative;
 			z-index: 2;
-			padding-top: 13px;
+			padding-top: 12px;
 			text-align: center;
 			.new-label{
 				.mixin-style(@color: @color-white, @font-size: 12px, @font-family: @font-avenir-black);
@@ -74,7 +74,7 @@
 			.price-box{
 				margin: 0 0 9px;
 				.price-label{
-					display: none;	
+					display: none !important;	
 				}
 				.price{
 					font-family: @font-avenir-heavy, Arial, Sans-serif;
@@ -83,10 +83,6 @@
 					color: #30241c;
 				}
 			}
-			.list-color{
-				height: 50px;
-			}
-
 			.button_mob{
 				display: none;
 			}
@@ -143,6 +139,49 @@
 				-o-border-radius: 4px;
 				border: none;
 			}
+		}
+	}
+
+	.product-item-details .swatch-attribute-options{
+		display: inline-block;
+		margin: 0;
+		.swatch-option{
+			width: 30px;
+			height: 30px;
+			margin-right: 2px;
+			border-radius: 50%;
+			padding: 0;
+			position: relative; 
+			border: 4px solid #fff;
+			display: inline-block;
+			float: left;
+			
+		}
+		.swatch-option.selected{
+			outline: none;
+			border:none;
+			width: 30px;
+			height: 30px;
+			margin-right: 2px;
+			border-radius: 50%;
+			padding: 0;
+			position: relative; 
+			border: 4px solid #fff;
+			display: inline-block;
+			float: left;
+		}
+		.swatch-option:hover{
+			outline: none;
+			border: none;
+			width: 30px;
+			height: 30px;
+			margin-right: 2px;
+			border-radius: 50%;
+			padding: 0;
+			position: relative; 
+			border: 4px solid #fff;
+			display: inline-block;
+			float: left;
 		}
 	}
 }

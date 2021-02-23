@@ -95,11 +95,6 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                     <?php if ($_product->isAvailable()) :?>
                         <?= $block->getProductDetailsHtml($_product) ?>
                     <?php endif; ?>
-
-                    <!-- color tam -->
-                    <div class="list-color">
-                        List color
-                    </div>
                     
                     <!-- view more -->
                      <a href="<?= $block->escapeUrl($_product->getProductUrl()) ?>" class="button_mob" >
