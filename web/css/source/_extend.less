@@ -1,0 +1,12 @@
+//add styleguide
+@import '_styleguide.less';
+@import '_homepage.less';
+@import '_header.less';
+@import '_footer.less';
+
+.position-absolute(@__left:50%, @__top:50%,@__x:-50%, @__y:-50%){
+	position: absolute;
+	left: @__left;
+	top: @__top;
+	transform: translate(@__x, @__y);
+}

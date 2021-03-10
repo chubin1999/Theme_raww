@@ -1,0 +1,426 @@
+& when (@media-common = true) {
+	body{
+        .lib-css(font-family,@font-avenir-roman);
+        .lib-css(font-size,@font-size15);
+        .lib-css(line-height,@font-size24);
+        .lib-css(color,@color-31251c-brown);
+    }
+    h1 {
+        .lib-css(font-family,@font-avenir-heavy);
+        .lib-css(font-size, @font-size32);
+        .lib-css(font-weight, bold);
+        .lib-css(letter-spacing, -1px);
+    }
+
+    h2 {
+        .lib-css(font-family,@font-avenir-heavy);
+        .lib-css(font-size, @font-size24);
+        .lib-css(font-weight, bold);
+        .lib-css(letter-spacing, -0.5px);
+    }
+
+    h3 {
+        .lib-css(font-family,@font-avenir-heavy);
+        .lib-css(font-size, @font-size20);
+        .lib-css(font-weight, bold);
+        .lib-css(letter-spacing, -0.5px);
+    }
+
+    h4 {
+        .lib-css(font-family,@font-avenir-heavy);
+        .lib-css(font-size, @font-size15);
+        .lib-css(font-weight, bold);
+        .lib-css(letter-spacing, 0px);
+    }
+
+    h5 {
+        .lib-css(font-family,@font-avenir-black);
+        .lib-css(font-size, @font-size14);
+        .lib-css(font-weight, bold);
+        .lib-css(letter-spacing, 0.5px);
+    }
+    a {
+        .lib-css(font-family, @font-avenir-roman);
+        .lib-css(color, @color-333);
+        .lib-css(cursor, pointer);
+        &:hover {
+            .lib-css(color, @color-777);
+        }
+    }
+
+    //button
+    button{
+        .lib-css(text-align, center);
+        .lib-button(
+            @_button-font-family: @font-avenir-heavy,
+            @_button-font-size: @font-size15,
+            @_button-line-height: @font-size20,
+            );
+
+        //Button Add to Bag
+        &.add-button{
+            .lib-css(border-radius, @font-size3);
+            .lib-button(
+                @_button-color: @color-white,
+                @_button-width: @font-size180,
+                @_button-line-height: @font-size35,
+                @_button-background: @color-30241a-brown,
+
+                @_button-color-hover: @color-white,
+                @_button-background-hover: @color-221912-brownbold,
+
+                @_button-color-active: @color-white,
+                @_button-background-active: @color-221912-brownbold             
+                );
+        }
+        &.active {
+            background: @color-221912-brownbold;
+        }
+        &:visited {
+            background: @color-white;
+            color: @color-white;
+        }
+
+        //Button Hollow
+        &.hollow-button{
+            .lib-css(border-radius, @font-size3);
+            .lib-button(
+                @_button-color: @color-30241a-brown,
+                @_button-width: @font-size140,
+                @_button-line-height: @font-size35,
+                @_button-background: @color-hollow,
+                @_button-border: @border-hollow-pink,
+
+                @_button-color-hover: @color-30241a-brown,
+                @_button-background-hover: @color-e9d5d2-pink,
+                @_button-border-hover:@border-hollow-pink,
+
+                @_button-color-active: @color-30241a-brown,
+                @_button-background-active: @color-e9d5d2-pink,
+                @_button-border-active:@border-hollow-pink,             
+                );
+        }
+    }
+
+    .adjust-button{
+        .lib-css(display, flex);
+        .lib-css(width, @font-size100);
+        .lib-css(height, @font-size50);
+        .lib-css(border-radius, @font-size3);
+        .lib-css(background-color, @color-white);
+        .lib-css(border, 1px solid #eeeeee);
+        
+        .input-adjust{
+            .lib-css(text-align, center);
+            .lib-css(height, @font-size50);
+            .lib-css(outline, none);
+            .lib-form-fieldset(
+               @_border: none,
+               @_legend-font-family: @font-avenir-roman,
+               @_legend-color: @color-31251c-brown,
+               @_legend-line-height: @font-size20,
+               @_legend-font-size: @font-size15,
+               @_margin: 0);
+        }
+
+        .button-adjust{
+          .lib-button(
+           @_button-background: none,
+           @_button-border: none,
+           @_button-color: @color-8b7f71,
+           @_button-font-family: @font-avenir-roman,
+           @_button-font-size: @font-size24,
+           @_button-color-hover: @color-8b7f71,
+           @_button-border-hover: none,
+           @_button-background-hover: none,
+           @_button-color-active: @color-8b7f71,
+           @_button-background-active: none,
+           @_button-border-active: none);
+      }
+  }
+
+    // input
+    input,
+    select,
+    textarea {
+       .lib-form-element-color(@_background: @color-white,
+        @_border-color: @color-ddd,
+        @_color: @color-black,
+        @_focus-color: @color-black,
+        @_focus-border-color: @color-ddd);
+   }
+
+   input {
+    background-color: #f4f4f4;
+    &:not([disabled]):focus {
+        .lib-css(box-shadow, none);
+    }
+        // input checkbox
+        &[type="checkbox"] {
+            .lib-css(visibility, hidden);
+            &:checked+label:before{
+                .lib-css(background, @color-white);
+                .lib-css(color, @color-black);
+                .lib-css(content, " ");
+                .lib-css(text-align, center);
+                .lib-css(font-size, @font-size15);
+                .lib-css(border,@font-size1 solid @color-black);
+            }
+
+            &:checked+label:after {
+                .lib-css(content, " ");
+                .lib-css(width, @font-size5);
+                .lib-css(height, @font-size8);
+                .lib-css(border-width, 0 2px 2px 0);
+                .lib-css(border-style, solid);
+
+                .lib-css(border-color, @color-black);
+                .lib-css(transform, rotate(45deg));
+                .lib-css(position, absolute);
+                .lib-css(left, 0);
+                .lib-css(top, 0);
+                .lib-css(margin, 4px 4px 4px 8px);
+            }
+
+            &+label:before{
+                .lib-css(border, @font-size1 solid @color-ddd);
+                .lib-css(content, " ");
+                .lib-css(display, inline-block);
+                .lib-css(margin, 0 10px -6px 0);
+                .lib-css(padding, 0);
+                .lib-css(vertical-align, top);
+                .lib-css(width, @font-size20);
+                .lib-css(height, @font-size20);
+            }
+        }
+
+        //input radio
+        &[type="radio"] {
+            .lib-css(visibility, hidden);
+            &:checked+label:after {
+                .lib-css(background, @color-333);
+                .lib-css(color, @color-white);
+                .lib-css(content, " ");
+                .lib-css(text-align, center);
+                .lib-css(width, @font-size8);
+                .lib-css(height, @font-size8);
+                .lib-css(position, absolute);
+                .lib-css(left, 0);
+                .lib-css(margin, 7px);
+                .lib-css(border-radius, 50%);
+            }
+
+            &+label:before {
+                .lib-css(border-radius, 50%);
+                .lib-css(vertical-align, baseline);
+                .lib-css(border, @font-size1 solid @color-ddd);
+                .lib-css(content, " ");
+                .lib-css(display, inline-block);
+                .lib-css(margin, 0 10px -6px 0);
+                .lib-css(padding, 0);
+                .lib-css(vertical-align, top);
+                .lib-css(width, @font-size20);
+                .lib-css(height, @font-size20);
+            }
+        }
+    }
+    label {
+        .lib-css(cursor, pointer);
+        .lib-css(position, relative);
+    }
+
+    // alert
+    .message-success {
+        .lib-message(success);
+        .lib-css(border, solid @font-size1 @color-28a738-green );
+        .lib-css(font-size, @font-size15);
+        .lib-css(line-height, @font-size30);
+        .lib-css(background, @color-white);
+        .lib-css(text-align, center);
+        .lib-css(color, @color-28a738-green);
+        .lib-css(border-radius, @font-size3);
+        .lib-css(width,676px);
+    }
+
+    .message-error {
+        .lib-message(error);
+        .lib-css(background, @color-rgba-null);
+        .lib-css(border, solid @font-size1 @color-ea1f24-red );
+        .lib-css(font-size, @font-size15);
+        .lib-css(line-height, @font-size30);
+        .lib-css(background, @color-white);
+        .lib-css(text-align, center);
+        .lib-css(color, @color-ea1f24-red);
+        .lib-css(border-radius, @font-size3);
+        .lib-css(width,676px);
+    }
+
+    //Input field
+    select {
+        .lib-css(box-shadow, none);
+        .lib-css(width, @font-size320);
+        .lib-css(height, @font-size40);
+        .lib-css(border-radius, @font-size3);
+        .lib-css(background-color, #fff);
+        .lib-css(border, @font-size1 solid @color-eee);
+        .lib-css(padding-left, 15px);
+    }
+
+    select.input-lg {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+    }
+
+    svg.svg-inline--fa.fa-chevron-down.fa-w-14 {
+        .lib-css(margin-left, -31px);
+        .lib-css(font-size, @font-size10);
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    input[type="text"] {
+        .lib-css(font-family,@font-avenir-book);
+        .lib-css(width, @font-size320);
+        .lib-css(height, @font-size40);
+        .lib-css(border-radius, @font-size3);
+        .lib-css(background-color, #fff);
+        .lib-css(border, @font-size1 solid #eee);
+        .lib-css(margin-top, 5px);
+        .lib-css(padding-left, 15px);
+    }
+
+    input:placeholder-shown {
+        .lib-css(font-size, @font-size15);
+        .lib-css(line-height, 75px);
+        .lib-css(font-family, @font-avenir-roman);
+    }
+
+    input:not(:focus) {
+        .lib-css(color, #999999);
+    }
+
+    input[type="text"]:focus {
+        .lib-css(box-shadow, none);
+        .lib-css(border, @font-size2 solid #eee);
+    }
+
+    input.mage-error {
+        .lib-css(font-size, @font-size15);
+        .lib-css(line-height, @font-size30);
+        .lib-css(color, @color-31251c-brown);
+        .lib-css(padding-left, 15px);
+        .lib-css(border, @font-size2 solid @color-ea1f24-red);
+        .lib-css(font-family,'Avenir');
+    }
+
+    div.mage-error {
+        .lib-css(font-size, @font-size14);
+        .lib-css(color, @color-ea1f24-red);
+        .lib-css(font-family, @font-avenir-roman);
+    }
+
+
+    //Misc
+
+    .awe-icon {
+        .lib-css(font-size, @font-size22);
+        .lib-css(color, @color-31251c-brown);
+    }
+
+    .awe-icon:hover {
+        .lib-css(color, @color-4f4035-hover);
+    }
+
+    .fa-instagram {
+        .lib-css(padding-left, 18px);
+    }
+
+    .face {
+        .lib-css(text-transform, uppercase);
+        .lib-css(font-size, @font-size14);
+        .lib-css(line-height, 15px);
+        .lib-css(color, @color-30241a-brown);
+        .lib-css(text-align, center);
+        .lib-css(font-weight, 800);
+        .lib-css(font-family,@font-avenir-roman);
+        .lib-css(margin-left,22px);
+        .lib-css(margin-top,-3px);
+    }
+
+    .face-1 {
+        p {
+            .lib-css(margin-bottom,3px);
+        }
+    }
+
+    .face-2{
+        p {
+            .lib-css(margin-bottom,3px);
+        }
+        
+        p:before {      
+            .lib-css(content, " ");
+            .lib-css(position, absolute);
+            .lib-css(width, @font-size37);
+            .lib-css(height, 109px);
+            .lib-css(margin-left, 22px);
+            .lib-css(border-bottom, @font-size2 solid @color-30241a-brown);
+        }
+    }
+}
+
+//Tab
+
+.product.data.items {
+    .item.title {
+        .lib-css(background-color, #fff);
+        .lib-css(margin, 0);
+        .lib-css(height, @font-size60);
+        .lib-css(border, @font-size1 solid @color-d1d1d1-gray);
+        .lib-css(border-right, none);
+        .lib-css(border-bottom, none);
+        .lib-css(cursor, pointer);
+
+        .switch {
+            .lib-css(font-size, @font-size14);
+            .lib-css(letter-spacing, @font-size1);
+            .lib-css(line-height, 20px);
+            .lib-css(color, #30241a);
+            .lib-css(padding, 20px 20px 19px 20px);
+            .lib-css(background-color, #fff);
+            .lib-css(border, none);
+            .lib-css(font-family,@font-avenir-roman);
+        }
+    }
+
+    .item.title:hover {
+        .lib-css(background-color, #fff);
+        .lib-css(border-bottom, @font-size2 solid @color-e9d5d2-pink);
+    }
+
+    .item.title.last-item {
+        .lib-css(border-right, @font-size1 solid @color-d1d1d1-gray);
+    }
+
+    .item.title:hover {
+        .lib-css(background-color, #fff);
+    }
+
+    .item.title.active {
+
+        .switch {
+            .lib-css(height, @font-size60);
+            .lib-css(border-bottom, none);       
+        }
+
+        .switch:hover {
+            .lib-css(background-color, #fff);
+        }
+    }
+
+    .item.content {
+        .lib-css(margin-top, @font-size60);
+        .lib-css(border, @font-size1 solid @color-d1d1d1-gray);
+    }
+}

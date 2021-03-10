@@ -1,0 +1,80 @@
+<div class="header-top-desktop-left">
+    <div class="dropdown">
+        <div class="dropbtn">Ship to Aus
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="dropdown-content">
+            <?php
+
+            echo $block->getLayout()
+
+                    ->createBlock('Magento\Cms\Block\Block')
+
+                    ->setBlockId('ship_to')
+
+                    ->toHtml();
+
+            ?>
+        </div>
+    </div>
+
+</div>
+
+<div class="header-top-desktop-center">
+    
+    <?php
+
+    echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('free_shipping_message')
+
+            ->toHtml();
+
+    ?>
+
+</div>
+
+<div class="header-top-desktop-right">
+    <?php
+
+    echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('about-raww')
+
+            ->toHtml();
+    ?>
+    
+</div>
+
+<div class="header-top-mobile-left">
+    <?php
+
+    echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('header_mobile_top_left')
+
+            ->toHtml();
+    ?>
+    
+</div>
+
+<div class="header-top-mobile-right">
+    <?php
+
+    echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('header_mobile_top_right')
+
+            ->toHtml();
+    ?>
+    
+</div>
+

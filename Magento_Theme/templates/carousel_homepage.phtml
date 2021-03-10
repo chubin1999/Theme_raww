@@ -1,0 +1,155 @@
+<ul class="owl-carousel owl-theme">
+
+    <li class="item">
+        
+        <?php
+            echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('carousel_image_homepage')
+            ->toHtml();
+        ?>
+
+        <div class="carousel-detail">
+            <?php
+                echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('carousel_item_detail')
+                ->toHtml();
+            ?>
+        </div>
+
+        <div class="carousel-swatch">
+            <?php
+                echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('carousel_item_swatch')
+                ->toHtml();
+            ?>
+        </div>
+
+        <div class="carousel-button">
+
+        </div>
+        
+    </li>
+    <li class="item">
+        
+        <?php
+            echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('carousel_image_homepage')
+            ->toHtml();
+        ?>
+
+        <div class="carousel-detail">
+            <?php
+                echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('carousel_item_detail')
+                ->toHtml();
+            ?>
+        </div>
+
+        <div class="carousel-swatch">
+            <?php
+                echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('carousel_item_swatch')
+                ->toHtml();
+            ?>
+        </div>
+
+        <div class="carousel-button">
+
+        </div>
+        
+    </li>
+    <li class="item">
+        
+        <?php
+            echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('carousel_image_homepage')
+            ->toHtml();
+        ?>
+
+        <div class="carousel-detail">
+            <?php
+                echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('carousel_item_detail')
+                ->toHtml();
+            ?>
+        </div>
+
+        <div class="carousel-swatch">
+            <?php
+                echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('carousel_item_swatch')
+                ->toHtml();
+            ?>
+        </div>
+
+        <div class="carousel-button">
+
+        </div>
+        
+    </li>
+    <li class="item">
+        
+        <?php
+            echo $block->getLayout()
+            ->createBlock('Magento\Cms\Block\Block')
+            ->setBlockId('carousel_image_homepage')
+            ->toHtml();
+        ?>
+
+        <div class="carousel-detail">
+            <?php
+                echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('carousel_item_detail')
+                ->toHtml();
+            ?>
+        </div>
+
+        <div class="carousel-swatch">
+            <?php
+                echo $block->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('carousel_item_swatch')
+                ->toHtml();
+            ?>
+        </div>
+
+        <div class="carousel-button">
+
+        </div>
+        
+    </li>
+</ul>
+
+<script>
+    require([
+        'jquery',
+        'tabs',
+        'fontawesome',
+        'owlcarousel'
+        ], function($){
+            $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:5,
+            nav:true,
+            navigation : true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                1000:{
+                    items:3
+                }
+            }
+        })
+    });
+</script>
